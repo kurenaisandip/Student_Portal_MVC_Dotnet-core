@@ -1,0 +1,45 @@
+﻿
+
+@* @{ *@
+@*     Layout = null; *@
+@* } *@
+
+@using System.Collections.ObjectModel
+@model List<Student_Portal_MVC_Dotnet_core.Models.Entities.Student>
+
+
+    <title>Students List</title>
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Name      
+        </th>
+        <th>
+            Email  
+        </th>
+        <th>
+                    
+        </th>
+        
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var items in Model)
+    {
+        <tr>
+            <td>@items.Id</td>
+            <td>@items.Name</td>
+            <td>@items.Email</td>
+            <td>
+                <a class="btn btn-primary" asp-controller="Students" asp-action="Edit" asp-route-id="@items.Id">Edit</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

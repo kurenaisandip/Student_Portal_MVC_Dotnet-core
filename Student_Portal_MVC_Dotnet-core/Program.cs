@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using Student_Portal_MVC_Dotnet_core.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//inject the ApplicationDBContext in our program
+builder.Services.AddDbContext<ApplicationDBContext>(options => 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("StudentPortal"))); 
 
 var app = builder.Build();
 
