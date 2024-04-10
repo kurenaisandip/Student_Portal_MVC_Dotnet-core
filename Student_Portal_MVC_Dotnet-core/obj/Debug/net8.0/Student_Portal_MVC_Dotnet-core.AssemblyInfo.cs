@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Student_Portal_MVC_Dotnet-core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fcc1cdbf3190434930f709a0003dd53963c8e4d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5696d5c79efd6ca789f89eca06a43daf304a2d2b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Student_Portal_MVC_Dotnet-core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Student_Portal_MVC_Dotnet-core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

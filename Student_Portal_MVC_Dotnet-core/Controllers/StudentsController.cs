@@ -69,4 +69,17 @@ public class StudentsController : Controller
       }
       return RedirectToAction("List", "Students");
     }
+
+    [HttpPost]
+    public async Task<IActionResult> Delete(Student viewModel)
+    {
+        var student =  _dbContext.Students.AsNoTracking()
+            .FirstOrDefault(x => x.Id == viewModel.Id)!;
+        if (student is not null)
+        {
+            _dbContext.Students.Remove(viewModel);
+            await _dbContext.SaveChangesAsync();
+        }
+        return RedirectToAction("List", "Students");
+    }
 }
